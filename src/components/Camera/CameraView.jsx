@@ -1,4 +1,5 @@
 import { useRef, useEffect, forwardRef, useImperativeHandle } from 'react'
+import { RefreshCw } from 'lucide-react'
 import './CameraView.css'
 
 const CameraView = forwardRef(function CameraView(
@@ -105,7 +106,7 @@ const CameraView = forwardRef(function CameraView(
           aria-label="Flip camera"
           title="Flip camera"
         >
-          🔄
+          <RefreshCw size={24} />
         </button>
 
         {/* Shutter button */}

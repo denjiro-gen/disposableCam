@@ -46,15 +46,8 @@ export async function applyFilm90sFilter(source, options = {}) {
   canvas.height = outHeight
   const ctx = canvas.getContext('2d', { willReadFrequently: true })
 
-  // Mirror horizontally if it's the front camera (video element)
-  if (source.tagName === 'VIDEO') {
-    ctx.save()
-    ctx.scale(-1, 1)
-    ctx.drawImage(source, -outWidth, 0, outWidth, outHeight)
-    ctx.restore()
-  } else {
-    ctx.drawImage(source, 0, 0, outWidth, outHeight)
-  }
+  // Draw source to canvas (un-mirrored, so text is readable in selfies)
+  ctx.drawImage(source, 0, 0, outWidth, outHeight)
 
   // ── Pixel-level color grading ────────────────────────────────────────────
   const imageData = ctx.getImageData(0, 0, outWidth, outHeight)
