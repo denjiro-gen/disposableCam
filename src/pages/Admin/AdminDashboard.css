@@ -1,0 +1,165 @@
+.admin-dash {
+  min-height: 100dvh;
+  background: var(--green-dark);
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-dash__main {
+  flex: 1;
+  padding: var(--space-xl) var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+/* Top bar */
+.admin-dash__topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.admin-dash__title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--cream);
+  letter-spacing: -0.02em;
+}
+
+.admin-dash__subtitle {
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  color: var(--film-amber);
+  margin-top: 4px;
+}
+
+.admin-dash__topbar-actions {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+/* Tabs */
+.admin-dash__tabs {
+  display: flex;
+  gap: var(--space-sm);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0;
+}
+
+.admin-dash__tab {
+  padding: 10px 20px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-bottom: -1px;
+  font-family: var(--font-main);
+}
+
+.admin-dash__tab:hover { color: var(--cream); }
+
+.admin-dash__tab.active {
+  color: var(--orange);
+  border-bottom-color: var(--orange);
+}
+
+/* Panel */
+.admin-dash__panel {
+  min-height: 300px;
+}
+
+.admin-dash__load-more {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-lg);
+}
+
+/* Photo moderation grid */
+.admin-photos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--space-md);
+}
+
+.admin-photo-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.2s;
+}
+
+.admin-photo-card.hidden {
+  opacity: 0.5;
+}
+
+.admin-photo-card__img-wrap {
+  position: relative;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  background: rgba(0,0,0,0.3);
+}
+
+.admin-photo-card__img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.admin-photo-card__hidden-badge {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.55);
+  font-family: var(--font-retro);
+  font-size: 1.2rem;
+  color: #FF9090;
+  letter-spacing: 0.1em;
+}
+
+.admin-photo-card__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 10px 4px;
+  font-size: 0.8rem;
+}
+
+.admin-photo-card__session {
+  font-size: 0.85rem;
+  color: var(--film-amber);
+  letter-spacing: 0.08em;
+}
+
+.admin-photo-card__num {
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+}
+
+.admin-photo-card__actions {
+  display: flex;
+  gap: 6px;
+  padding: 6px 8px 10px;
+}
+
+.admin-photo-card__actions .btn {
+  flex: 1;
+  justify-content: center;
+}
+
+@media (max-width: 600px) {
+  .admin-dash__main { padding: var(--space-md); gap: var(--space-lg); }
+  .admin-photos-grid { grid-template-columns: repeat(2, 1fr); gap: var(--space-sm); }
+}

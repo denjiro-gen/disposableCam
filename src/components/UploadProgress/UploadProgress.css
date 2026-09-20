@@ -1,0 +1,109 @@
+.upload-progress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  text-align: center;
+  padding: var(--space-xl) var(--space-lg);
+}
+
+.upload-progress__title {
+  font-size: 1.4rem;
+  color: var(--cream);
+  letter-spacing: 0.1em;
+}
+
+.upload-progress__subtitle {
+  font-size: 0.85rem;
+  color: var(--beige);
+  margin-top: 4px;
+}
+
+.upload-progress__bar-wrap {
+  width: 100%;
+  height: 6px;
+  background: rgba(255,255,255,0.1);
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+}
+
+.upload-progress__bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--green-main), var(--orange));
+  border-radius: var(--radius-pill);
+  transition: width 0.4s var(--ease-out);
+}
+
+.upload-progress__count {
+  font-size: 1rem;
+  color: var(--film-amber);
+  letter-spacing: 0.1em;
+}
+
+.upload-progress__list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.upload-progress__item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  transition: all 0.25s;
+}
+
+.upload-progress__item--success {
+  border-color: rgba(50,200,100,0.3);
+  background: rgba(50,200,100,0.07);
+}
+
+.upload-progress__item--error {
+  border-color: rgba(220,80,80,0.35);
+  background: rgba(220,80,80,0.07);
+}
+
+.upload-progress__item--uploading {
+  border-color: rgba(201,107,60,0.35);
+  background: rgba(201,107,60,0.07);
+}
+
+.upload-progress__item-icon {
+  font-size: 1rem;
+  width: 18px;
+  text-align: center;
+}
+
+.upload-progress__item--success  .upload-progress__item-icon { color: #60E090; }
+.upload-progress__item--error    .upload-progress__item-icon { color: #FF7070; }
+.upload-progress__item--uploading .upload-progress__item-icon {
+  color: var(--orange);
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.upload-progress__item-status {
+  margin-left: auto;
+  font-size: 0.8rem;
+  color: var(--text-light);
+  font-family: var(--font-mono);
+}
+
+.upload-progress__warning {
+  font-size: 0.85rem;
+  color: #FF9090;
+  background: rgba(220,80,80,0.1);
+  border: 1px solid rgba(220,80,80,0.25);
+  padding: 10px 16px;
+  border-radius: var(--radius-md);
+  width: 100%;
+}

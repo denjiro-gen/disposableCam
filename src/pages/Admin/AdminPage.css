@@ -1,0 +1,68 @@
+.admin-login {
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(ellipse at 50% 60%, rgba(35,79,61,0.3), transparent 70%),
+              var(--green-dark);
+  padding: var(--space-lg);
+}
+
+.admin-login__card {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-2xl) var(--space-xl);
+  text-align: center;
+}
+
+.admin-login__icon { font-size: 3rem; }
+
+.admin-login__title {
+  font-size: 1.5rem;
+  color: var(--cream);
+}
+
+.admin-login__sub {
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  color: var(--film-amber);
+  margin-top: -8px;
+}
+
+.admin-login__form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin-top: var(--space-sm);
+}
+
+.admin-login__error {
+  font-size: 0.85rem;
+  color: #FF8080;
+  text-align: left;
+}
+
+.admin-login__back {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.admin-login__back:hover { color: var(--cream); }
+
+.shake {
+  animation: shake 0.4s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-8px); }
+  40% { transform: translateX(8px); }
+  60% { transform: translateX(-6px); }
+  80% { transform: translateX(6px); }
+}

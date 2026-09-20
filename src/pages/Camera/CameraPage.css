@@ -1,0 +1,120 @@
+.camera-page {
+  min-height: 100dvh;
+  background: var(--green-dark);
+  display: flex;
+  flex-direction: column;
+}
+
+.camera-page__inner {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-md) var(--space-lg) var(--space-xl);
+  max-width: 680px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.camera-page__header {
+  text-align: center;
+  padding: var(--space-sm) 0 var(--space-md);
+  width: 100%;
+}
+
+.camera-page__event {
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  color: var(--film-amber);
+}
+
+.camera-page__desc {
+  font-size: 0.72rem;
+  color: var(--text-light);
+  letter-spacing: 0.12em;
+  margin-top: 4px;
+  text-transform: uppercase;
+}
+
+.camera-page__session-error {
+  width: 100%;
+  padding: 10px 16px;
+  border-radius: var(--radius-md);
+  background: rgba(220,80,80,0.12);
+  border: 1px solid rgba(220,80,80,0.3);
+  color: #FF9090;
+  font-size: 0.82rem;
+  margin-bottom: var(--space-md);
+}
+
+.camera-page__processing {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Complete screen ── */
+.camera-page__complete {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
+  text-align: center;
+  padding-bottom: var(--space-2xl);
+  width: 100%;
+}
+
+.camera-page__complete-icon {
+  font-size: 3.5rem;
+  animation: popIn 0.5s var(--ease-back) both;
+}
+
+@keyframes popIn {
+  from { transform: scale(0.5); opacity: 0; }
+  to   { transform: scale(1);   opacity: 1; }
+}
+
+.camera-page__complete-title {
+  font-size: 1.6rem;
+  color: var(--cream);
+  letter-spacing: 0.08em;
+}
+
+.camera-page__complete-sub {
+  color: var(--beige);
+  font-size: 0.95rem;
+}
+
+.camera-page__photo-grid {
+  width: 100%;
+}
+
+.camera-page__qr-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.camera-page__qr-title {
+  font-family: var(--font-retro);
+  font-size: 1.1rem;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  color: var(--film-amber);
+}
+
+.camera-page__complete-actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  width: 100%;
+  max-width: 360px;
+}
+
+.camera-page__complete-actions .btn {
+  width: 100%;
+  justify-content: center;
+}
