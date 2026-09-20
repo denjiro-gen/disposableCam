@@ -19,7 +19,13 @@ export function generateSessionCode() {
 export async function createSession(deviceId) {
   // First, check if a session already exists for this device
   const existing = await getDeviceSession(deviceId)
+  
   if (existing) {
+    if (existing.status === 'active') {
+      // If they navigated away and came back before finishing, resume the session
+      return existing
+    }
+    // If it's completed, lock them out
     throw new Error('ALREADY_USED')
   }
 
